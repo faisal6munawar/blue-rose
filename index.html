@@ -6,14 +6,12 @@
     <title>Blue Rose</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- 🌹 LOADING SCREEN -->
-<div id="loading-screen">
+<div id="loading-screen" class="layer-section">
     <div class="overlay"></div>
 
-    <div class="content">
+    <div class="layer-content-flex">
         <h1>Something Beautiful</h1>
         <h2>for my beautiful friend</h2>
         <h3>🌹 Blue Rose 🌹</h3>
@@ -24,92 +22,79 @@
     </div>
 </div>
 
-<!-- 🎮 LAYER 2 -->
-<div id="layer2" class="hidden">
+<div id="layer2" class="layer-section hidden">
     <div class="layer-overlay"></div>
 
-    <div class="layer-content">
+    <div class="layer-content-flex">
         <p class="ghazal">
             Game pe mili thi tum,<br>
             Game ki duniya mein ek din mulaqat hui,<br><br>
-
             Na chehra dekha,<br>
             Na koi pehchaan hui.<br><br>
-
             Bas ek awaaz thi,<br>
             Jo dheere dheere apni si lagne lagi,<br><br>
-
             Aur phir pata bhi na chala,<br><br>
-
             Kab ek random player,<br>
             Meri pasandida dost ban gayi. 💙
         </p>
     </div>
 
-    <button id="nextBtn">Next ➜</button>
+    <div class="layer-button-flex">
+        <button id="nextBtn">Next ➜</button>
+    </div>
 </div>
 
-<!-- 📸 LAYER 3 -->
-<div id="layer3" class="hidden">
+<div id="layer3" class="layer-section hidden">
     <div class="layer-overlay"></div>
 
-    <p class="ghazal2">
-        Insta ni de rahi thi, kafi mehnat ki to diya 📱😤<br><br>
+    <div class="layer-content-flex">
+        <p class="ghazal2">
+            Insta ni de rahi thi, kafi mehnat ki to diya 📱😤<br><br>
+            Phir thori si baat hui,<br>
+            Aur “seen” se “reply” tak journey shuru hui 💬<br><br>
+            Din raat vibes set ho gayi,<br>
+            Aur pata hi nahi chala…<br><br>
+            Ek app ne dosti ko full-time subscription bana diya 💙
+        </p>
+    </div>
 
-        Phir thori si baat hui,<br>
-        Aur “seen” se “reply” tak journey shuru hui 💬<br><br>
-
-        Din raat vibes set ho gayi,<br>
-        Aur pata hi nahi chala…<br><br>
-
-        Ek app ne dosti ko full-time subscription bana diya 💙
-    </p>
-
-    <!-- 🍊 ORANGE BUTTON -->
-    <div id="orangeBtn">
-        🍊🍊
-        <span class="cloudText">touch me</span>
+    <div class="layer-button-flex">
+        <div id="orangeBtn">
+            <div>🍊🍊</div>
+            <span class="cloudText">touch me</span>
+        </div>
     </div>
 </div>
 
-<!-- 💔 LAYER 4 (FIXED LOCATION) -->
-<div id="layer4" class="hidden">
-
+<div id="layer4" class="layer-section hidden">
     <div class="layer-overlay"></div>
 
-    <div class="layer4-content">
-
-    <p class="sorry-text">
-    Bohot ghaltiyan ki hain… 😔<br>
-    Bohot dafa dil bhi dukhaya hai 💔<br><br>
-
-    Ab bas itni si request hai…<br>
-    itna gussa mat ho… warna radiator bhi sharma jaye 😭🔥<br><br>
-
-    Dil ka temperature already high hai,<br>
-    thora sa “cool mode” on kar lo 😌❄️<br><br>
-
-    Please… sorry sorry sorry 🙏💙<br>
-    ab maaf kar do warna system crash ho jayega 😂
-</p>
-
+    <div class="layer-content-flex">
+        <p class="sorry-text">
+            Bohot ghaltiyan ki hain… 😔<br>
+            Bohot dafa dil bhi dukhaya hai 💔<br><br>
+            Ab bas itni si request hai…<br>
+            itna gussa mat ho… warna radiator bhi sharma jaye 😭🔥<br><br>
+            Dil ka temperature already high hai,<br>
+            thora sa “cool mode” on kar lo 😌❄️<br><br>
+            Please… sorry sorry sorry 🙏💙<br>
+            ab maaf kar do warna system crash ho jayega 😂
+        </p>
     </div>
 
-    <button id="sorryBtn">Okay maaf kar diya 💙</button>
-
+    <div class="layer-button-flex">
+        <button id="sorryBtn">Okay maaf kar diya 💙</button>
+    </div>
 </div>
 
-<div id="layer5" class="hidden final-layer">
-
-    <div class="final-text">
-
-        ok time kam ha to ajkliye itna ha,<br>
-        baki agli bar sahi <br><br>
-
-        shukria maf karny ka!! 💙
-
+<div id="layer5" class="layer-section hidden final-layer">
+    <div class="layer-content-flex">
+        <div class="final-text">
+            ok time kam ha to ajkliye itna ha,<br>
+            baki agli bar sahi <br><br>
+            shukria maf karny ka!! 💙
+        </div>
     </div>
-
 </div>
 
 <script src="script.js"></script>
