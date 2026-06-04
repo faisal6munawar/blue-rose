@@ -4,9 +4,14 @@
     box-sizing:border-box;
 }
 
+html, body{
+    height:100%;
+}
+
 body{
     font-family:Arial, sans-serif;
-    overflow:hidden;
+    overflow-y:auto;     /* ✅ FIX: allow scroll */
+    overflow-x:hidden;
 }
 
 /* 🌹 LOADING */
@@ -73,7 +78,7 @@ body{
     background:rgba(0,0,0,0.55);
 }
 
-/* 💙 GHazal FIX (mobile safe) */
+/* 💙 GHazal FIX */
 .layer-content{
     position:absolute;
     top:50%;
@@ -91,7 +96,7 @@ body{
 
 #nextBtn{
     position:absolute;
-    bottom:35px;
+    bottom:70px;   /* ✅ FIX: moved up so not cut off */
     left:50%;
     transform:translateX(-50%);
     padding:14px 30px;
@@ -123,10 +128,10 @@ body{
     width:88%;
 }
 
-/* 🍊 BUTTON FIX */
+/* 🍊 BUTTON */
 #orangeBtn{
     position:absolute;
-    bottom:40px;
+    bottom:80px;   /* ✅ FIXED */
     left:50%;
     transform:translateX(-50%) scale(1);
 
@@ -136,7 +141,6 @@ body{
     text-align:center;
 
     max-width:90vw;
-
     transition: transform 0.25s ease;
 }
 
@@ -150,7 +154,7 @@ body{
     margin-top:5px;
 }
 
-/* 🍊 GROW STATES (FIXED SAFE SCALE) */
+/* 🍊 GROW STATES */
 .orange-grow-1{
     transform:translateX(-50%) scale(1.2);
 }
@@ -166,6 +170,8 @@ body{
 .orange-grow-4{
     transform:translateX(-50%) scale(2.0);
 }
+
+/* 💔 LAYER 4 */
 #layer4{
     width:100vw;
     height:100vh;
@@ -175,7 +181,6 @@ body{
     position:relative;
 }
 
-/* 💔 TEXT */
 .layer4-content{
     position:absolute;
     top:50%;
@@ -187,14 +192,16 @@ body{
 }
 
 .sorry-text{
-    font-size:1.05rem;
-    line-height:1.7;
+    font-size:0.95rem;
+    line-height:1.6;
+    width:90%;
+    margin:0 auto;
 }
 
 /* 💙 BUTTON */
 #sorryBtn{
     position:absolute;
-    bottom:40px;
+    bottom:80px;  /* ✅ FIXED */
     left:50%;
     transform:translateX(-50%);
     
@@ -213,17 +220,11 @@ body{
     box-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* hover effect */
 #sorryBtn:hover{
     transform:translateX(-50%) scale(1.05);
 }
-.sorry-text{
-    font-size:0.95rem;   /* smaller for mobile */
-    line-height:1.6;
-    width:90%;
-    margin:0 auto;
-}
 
+/* 🌙 FINAL LAYER */
 #layer5{
     width:100vw;
     height:100vh;
