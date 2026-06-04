@@ -12,55 +12,44 @@ let sorryClicks = 0;
 
 /* 🌹 LOADING SCREEN */
 const interval = setInterval(() => {
-
     progress++;
     bar.style.width = progress + "%";
 
     if(progress >= 100){
-
         clearInterval(interval);
-
         setTimeout(() => {
-            loadingScreen.style.display = "none";
-            layer2.style.display = "block";
+            loadingScreen.classList.add("hidden");
+            layer2.classList.remove("hidden");
         }, 500);
     }
-
 }, 35);
 
 
 /* 🎮 LAYER 2 BUTTON CHAOS */
 document.addEventListener("click", function(e){
-
     if(e.target.id === "nextBtn"){
-
         clickCount++;
-
         const btn = e.target;
 
         if(clickCount === 1){
             btn.innerText = "Click me again 😏";
-            btn.style.transform = "translateX(-50%) scale(1.2)";
+            btn.style.transform = "scale(1.15)";
         }
-
         else if(clickCount === 2){
             btn.innerText = "Stop touching me 😤";
-            btn.style.transform = "translateX(-50%) scale(1.5)";
+            btn.style.transform = "scale(1.3)";
         }
-
         else if(clickCount === 3){
             btn.innerText = "BRO STOP 😭";
-            btn.style.transform = "translateX(-50%) scale(1.9)";
+            btn.style.transform = "scale(1.45)";
         }
-
         else if(clickCount >= 4){
-
             btn.innerText = "ok fine... go 😔➡️";
-            btn.style.transform = "translateX(-50%) scale(2.2)";
+            btn.style.transform = "scale(1.6)";
 
             setTimeout(() => {
-                layer2.style.display = "none";
-                layer3.style.display = "block";
+                layer2.classList.add("hidden");
+                layer3.classList.remove("hidden");
             }, 800);
         }
     }
@@ -69,76 +58,61 @@ document.addEventListener("click", function(e){
 
 /* 🍊 LAYER 3 ORANGE BUTTON */
 document.addEventListener("click", function(e){
-
     const btn = document.getElementById("orangeBtn");
-
     if(!btn) return;
 
     if(e.target.id === "orangeBtn" || e.target.closest("#orangeBtn")){
-
         orangeClicks++;
-
         const cloud = btn.querySelector(".cloudText");
 
         if(orangeClicks === 1){
-            btn.style.transform = "translateX(-50%) scale(1.3)";
+            btn.style.transform = "scale(1.2)";
             cloud.innerText = "emm barhy sangtry 🍊";
         }
-
         else if(orangeClicks === 2){
-            btn.style.transform = "translateX(-50%) scale(1.6)";
+            btn.style.transform = "scale(1.4)";
             cloud.innerText = "emm aur barhy sangtry 🍊🍊";
         }
-
         else if(orangeClicks === 3){
-            btn.style.transform = "translateX(-50%) scale(2.0)";
+            btn.style.transform = "scale(1.6)";
             cloud.innerText = "ary wah itny barhy 😳🍊🍊🍊";
         }
-
         else if(orangeClicks >= 4){
-            btn.style.transform = "translateX(-50%) scale(2.4)";
+            btn.style.transform = "scale(1.8)";
             cloud.innerText = "ok bas... ab next layer 😭➡️";
 
             setTimeout(() => {
-                layer3.style.display = "none";
-                layer4.style.display = "block";
+                layer3.classList.add("hidden");
+                layer4.classList.remove("hidden");
             }, 900);
         }
     }
-
 });
 
 
 /* 💔 LAYER 4 SORRY BUTTON */
 document.addEventListener("click", function(e){
-
     const btn = document.getElementById("sorryBtn");
-
     if(!btn) return;
 
     if(e.target.id === "sorryBtn"){
-
         sorryClicks++;
 
         if(sorryClicks === 1){
             btn.innerText = "haan haan kar diya 😌";
-            btn.style.transform = "translateX(-50%) scale(1.08)";
+            btn.style.transform = "scale(1.05)";
         }
-
         else if(sorryClicks === 2){
             btn.innerText = "haan baba kar diya 😭💙";
-            btn.style.transform = "translateX(-50%) scale(1.12)";
+            btn.style.transform = "scale(1.1)";
         }
-
         else if(sorryClicks >= 3){
-
             btn.innerText = "💙 chalo maaf kiya";
 
             setTimeout(() => {
-                layer4.style.display = "none";
-                layer5.style.display = "flex";
+                layer4.classList.add("hidden");
+                layer5.classList.remove("hidden");
             }, 900);
         }
     }
-
 });
